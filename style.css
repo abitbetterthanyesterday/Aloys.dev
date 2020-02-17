@@ -1,0 +1,58 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  height: 100vh;
+}
+
+header > h1 {
+  font-size: 3em;
+}
+
+header > h2 {
+  font-size: 1.5em;
+}
+
+header {
+  text-align: center;
+}
+
+header {
+  background-image: url("./assets/background_header.png");
+}
+
+header > * {
+  color: #fff;
+}
+
+header > input {
+  margin-top: 2em;
+  padding: 1em 2em;
+  background-color: #DB2B39;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  border-radius: 20px;
+}
+
+header > h1 > span {
+  color: #DB2B39;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+header > h2 {
+  opacity: 70%;
+}
+
+/*# sourceMappingURL=style.css.map */
