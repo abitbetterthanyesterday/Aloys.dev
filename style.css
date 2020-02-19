@@ -15,7 +15,13 @@ section {
   height: 100vh;
 }
 
+* {
+  font-family: "Work Sans", sans-serif;
+}
+
 header > h1 {
+  line-height: 1.8em;
+  letter-spacing: 0.1em;
   font-size: 3em;
 }
 
@@ -29,6 +35,8 @@ header {
 
 header {
   background-image: url("./assets/background_header.png");
+  background-position: center;
+  background-size: 105%;
 }
 
 header > * {
