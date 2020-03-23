@@ -1,3 +1,5 @@
+
+
 html, body {
   margin: 0;
   padding: 0;
@@ -88,3 +90,63 @@ header > h2 {
 
 
 /*ABOUT ME*/
+
+#about{
+  display: flex;
+  flex-direction: row;
+}
+
+.about__subsection{
+  flex: 0 1 40%;
+}
+
+.about__subsection:first-child > * {
+  padding: 0 20%;
+}
+
+#about h3{
+  font-size: 2.5em;
+  text-transform: uppercase;
+  padding-top: 0.5em;
+  letter-spacing: 0.05em;
+}
+
+.about__subsection:last-child{
+  margin-top: 4%;
+  flex-grow: 1;
+}
+
+h4{
+  margin: 1em;
+}
+
+h4>div{
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 10%;
+  align-items: center;
+  text-transform: capitalize;
+  font-size: 1.5em;
+}
+
+h4>div>div{
+  /*max-width: 60%;*/
+  flex: 0 0 70%;
+  background-color: blue;
+  height: 1.5em;
+  margin-left: 2em;
+}
+
+
+.legends{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  padding-left: 30%;
+  width: 70%;
+}
+
+/*Dev*/
+#about{
+  background: red;
+}
