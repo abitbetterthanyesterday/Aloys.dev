@@ -3,6 +3,8 @@ html, body {
   padding: 0;
 }
 
+/*HEADER*/
+
 header {
   height: 100vh;
   display: flex;
@@ -15,12 +17,19 @@ section {
   height: 100vh;
 }
 
+* {
+  font-family: "Work Sans", sans-serif;
+}
+
 header > h1 {
+  line-height: 1.8em;
+  letter-spacing: 0.10em;
   font-size: 3em;
 }
 
 header > h2 {
   font-size: 1.5em;
+  letter-spacing: 0.14em;
 }
 
 header {
@@ -29,30 +38,53 @@ header {
 
 header {
   background-image: url("./assets/background_header.png");
+  background-position: center;
+  background-size: 105%;
+}
+
+/*Background filter*/
+
+header::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #0D3B66;
+  opacity: 0.45;
+  z-index: 1;
 }
 
 header > * {
   color: #fff;
+  z-index: 2;
 }
 
 header > input {
   margin-top: 2em;
-  padding: 1em 2em;
+  padding: 1.1em 2.4em;
   background-color: #DB2B39;
   color: #fff;
   text-transform: uppercase;
+  font-weight: 100;
   font-size: 1.5em;
   border-radius: 20px;
+  border: none;
+  cursor: pointer;
 }
 
+/*Red Aloys*/
 header > h1 > span {
   color: #DB2B39;
-  text-transform: uppercase;
-  font-weight: 700;
+  text-transform: capitalize;
+  font-weight: bold;
 }
 
 header > h2 {
-  opacity: 70%;
+  opacity: 65%;
+  margin-top: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
+
+
+/*ABOUT ME*/
