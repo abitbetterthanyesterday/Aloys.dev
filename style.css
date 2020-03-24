@@ -132,9 +132,22 @@ h4>div{
 h4>div>div{
   /*max-width: 60%;*/
   flex: 0 0 70%;
-  background-color: blue;
+  background-color: #0D3B66;
+  border-radius: 0.75em;
   height: 1.5em;
   margin-left: 2em;
+}
+
+h4>div>div::after{
+  content:"";
+  position: absolute;
+  margin-top: 0.375em;
+  margin-left: 0.4em;
+  border-radius: 0.375em;
+  z-index: 1;
+  background: red;
+  height: 0.75em;
+  width: 25%;
 }
 
 
@@ -148,5 +161,5 @@ h4>div>div{
 
 /*Dev*/
 #about{
-  background: red;
+  /*background: red;*/
 }
