@@ -143,29 +143,55 @@ img{
 }
 
 #about h4{
-  line-height: 2.5em;
+  /*line-height: 2.5em;*/
   color: var(--accent-color);
 }
 
-h4>div{
-  display: flex;
-  justify-content: flex-end;
-  margin-right: 10%;
-  align-items: center;
-  text-transform: capitalize;
-  font-size: 1.5em;
+.skills{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(11, 1fr);
+  grid-template-areas: 
+    "title skill skill skill skill"
+    "title skill skill skill skill"
+    "title skill skill skill skill"
+    "title skill skill skill skill"
+    "title skill skill skill skill"
+    "title skill skill skill skill"
+    "title skill skill skill skill"
+    "title skill skill skill skill"
+    "title skill skill skill skill"
+    "title skill skill skill skill"
+    ". legend legend legend legend"
 }
 
-h4>div>div{
-  /*max-width: 60%;*/
-  flex: 0 0 70%;
+.skills__titles{
+  grid-area: title;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(10, 1fr);
+  justify-items: end;
+  align-items: center;
+}
+
+.skills__title{
+  margin: 0;
+}
+
+/*.skills__bars{
+  grid-area: skill;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+
+.skills__bar { 
+  flex: 1 0 100%;
   background-color: #0D3B66;
   border-radius: 0.75em;
   height: 1.5em;
-  margin-left: 2em;
-  transition: all 2s;
-
-}
+}*/
 
 h4>div>div>div{
   margin-top: 0.375em;
@@ -194,6 +220,9 @@ h4>div>div>div{
 .legends > *:nth-child(even){
   position: relative;
   margin-top: 0em;
+}
+
+.legends p{
 }
 
 

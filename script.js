@@ -1,5 +1,6 @@
 let skills = document.querySelector('.about__subsection');
 let innerSkillBar = document.querySelectorAll('.innerBar');
+let img = document.querySelector('img');
 
 let innerSkillBarArr = [...innerSkillBar];
 //create an array of level of competency for each skills.
