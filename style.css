@@ -210,7 +210,7 @@ img{
   border-right: 1px dashed white;
 }
 
-/*h4>div>div>div{
+.skills__innerBar{
   margin-top: 0.375em;
   margin-left: 0.4em;
   z-index: 1;
@@ -220,8 +220,8 @@ img{
   width: 0%;
 
   /*stay as per end of the animation*/
- /* animation-fill-mode: forwards;
-}*/
+  animation-fill-mode: forwards;
+}
 
 .skills__legends{
   grid-area: legend;
@@ -238,26 +238,7 @@ img{
 }
 
 
-
-/*Not sure how to do this. These are the bars for the legends on the skills bars
-/*.legends > *:nth-child(even):after{
-  content: '';
-  position: relative;
-  top: 0;
-  height: 200px;
-  background-color: black;
-  width: 2px;
-}*/
-/*
-.skills__legend:nth-child(even){
-  margin-top: 0em;
-}
-
-.skills__legend:nth-child(odd){
-  margin-top: 1em;*/
-
-
-/*Dev*/
+/*Dev
 #about{
   /*background: red;*/
 }

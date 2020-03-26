@@ -1,10 +1,10 @@
-let skills = document.querySelector('.about__subsection');
-let innerSkillBar = document.querySelectorAll('.innerBar');
-let img = document.querySelector('img');
+let skills = document.querySelector('#about');
+let innerSkillBar = document.querySelectorAll('.skills__innerBar');
 
 let innerSkillBarArr = [...innerSkillBar];
 //create an array of level of competency for each skills.
-let innerSkillBarLvlArr = innerSkillBarArr.map(bar => bar.dataset.level);
+let innerSkillBarLvlArr = [...innerSkillBar]
+                            .map(bar => bar.dataset.level);
 
 
 let style = document.createElement('style');
@@ -36,7 +36,8 @@ let ref = document.querySelector('script');
 ref.parentNode.insertBefore(style, ref);
 
 window.addEventListener('scroll',() => {
-  if (skills.getBoundingClientRect().y < window.innerHeight/2) {
+  if (skills.getBoundingClientRect().y < window.innerHeight/3) {
+    console.log('here');
     innerSkillBarArr.forEach(bar => bar.style.animation = `growFromLeft${bar.dataset.level} 2s ease-in-out`);
     innerSkillBarArr.forEach(bar => bar.style.animationFillMode = 'forwards');
   }
