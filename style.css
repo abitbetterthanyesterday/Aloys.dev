@@ -12,6 +12,17 @@ html, body {
   padding: 0;
 }
 
+/*SCROLL SNAPPING*/
+
+html{
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+}
+
+header,section,footer{
+  scroll-snap-align: start;
+}
+
 /*HEADER*/
 
 header {
@@ -191,8 +202,21 @@ img{
 
 .skills__bar { 
   background-color: #0D3B66;
-  border-radius: 0.75em;
-  height: 1.5em;
+  border-radius: 1em;
+  height: 2em;
+}
+
+.skills__innerBar{
+  margin-top: 0.375em;
+  margin-left: 0.4em;
+  z-index: 1;
+  background: var(--accent-color);
+  border-radius: 0.625em;
+  height: 1.25em;
+  width: 0%;
+
+  /*stay as per end of the animation*/
+  animation-fill-mode: forwards;
 }
 
 .skills__barsPercentages{
@@ -208,19 +232,6 @@ img{
   z-index: 9;
   height: 100%;
   border-right: 1px dashed white;
-}
-
-.skills__innerBar{
-  margin-top: 0.375em;
-  margin-left: 0.4em;
-  z-index: 1;
-  background: var(--accent-color);
-  border-radius: 0.3em;
-  height: 0.75em;
-  width: 0%;
-
-  /*stay as per end of the animation*/
-  animation-fill-mode: forwards;
 }
 
 .skills__legends{
