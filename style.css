@@ -118,8 +118,14 @@ header > h2 {
   flex: 0 1 40%;
 }
 
+.about__subsection:first-child{
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
 .about__subsection:first-child > * {
-  padding: 0 20%;
+  padding: 0 0 0 20%;
 }
 
 #about h3{
