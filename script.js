@@ -47,18 +47,17 @@
 })();
 
 //FEATURE SECTION ANIMATION
+(function animateFeatureSection() {
+    let feature = document.querySelector('#feature');
+    let icon = document.querySelectorAll('.feature__icon');
+    let title = document.querySelectorAll('.feature__title');
+    let body = document.querySelectorAll('.feature__body');
 
-(function animateFeatureSection(){
-let feature = document.querySelector('#feature');
-let icon = document.querySelectorAll('.feature__icon');
-let title = document.querySelectorAll('.feature__title');
-let body = document.querySelectorAll('.feature__body');
-
-window.addEventListener('scroll', () =>{
-  if (feature.getBoundingClientRect().y < window.innerHeight / 3){
-    icon.forEach(feature => feature.classList.add('animated','fadeInUp', 'fast',));
-    title.forEach(feature => feature.classList.add('animated','fadeInUp', 'fast', 'delay-1s'));
-    body.forEach(feature => feature.classList.add('animated','fadeInUp', 'fast', 'delay-2s'));
-  }
-});
+    window.addEventListener('scroll', () => {
+        if (feature.getBoundingClientRect().y < window.innerHeight / 3) {
+            icon.forEach(feature => feature.classList.add('animated', 'fadeInUp', 'fast', ));
+            title.forEach(feature => feature.classList.add('animated', 'fadeInUp', 'fast', 'delay-1s'));
+            body.forEach(feature => feature.classList.add('animated', 'fadeInUp', 'fast', 'delay-2s'));
+        }
+    });
 })()
