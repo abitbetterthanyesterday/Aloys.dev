@@ -1,6 +1,26 @@
+/*VARIABLES*/
+
+:root{
+  --main-color: #0D3B66;
+  --accent-color: #DB2B39;
+}
+
+/*RESET*/
+
 html, body {
   margin: 0;
   padding: 0;
+}
+
+/*SCROLL SNAPPING*/
+
+html{
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+}
+
+header,section,footer{
+  scroll-snap-align: start;
 }
 
 /*HEADER*/
@@ -88,3 +108,157 @@ header > h2 {
 
 
 /*ABOUT ME*/
+
+#about{
+  display: flex;
+  flex-direction: row;
+}
+
+.about__subsection{
+  flex: 0 1 40%;
+}
+
+.about__subsection:first-child{
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+.about__subsection:first-child > * {
+  padding: 0 0 0 20%;
+}
+
+#about h3{
+  font-size: 2.5em;
+  text-transform: uppercase;
+  padding-top: 0.5em;
+  letter-spacing: 0.05em;
+}
+
+.about__subsection:last-child{
+  margin-top: 4%;
+  flex-grow: 1;
+}
+
+h4{
+  margin: 1em;
+}
+
+img{
+  height: 30%;
+  width: 60%;
+}
+
+#about p{
+  text-align: justify;
+  line-height: 2em;
+
+}
+
+#about h3{
+  color: var(--accent-color);
+}
+
+#about h4{
+  /*line-height: 2.5em;*/
+  color: var(--accent-color);
+}
+
+.skills{
+  display: grid;
+  grid-template-columns: repeat(5, 20%);
+  grid-template-rows: repeat(11, 1fr);
+  grid-template-areas: 
+    "title skill skill skill skill"
+    "title skill skill skill skill"
+    "title skill skill skill skill"
+    "title skill skill skill skill"
+    "title skill skill skill skill"
+    "title skill skill skill skill"
+    "title skill skill skill skill"
+    "title skill skill skill skill"
+    "title skill skill skill skill"
+    "title skill skill skill skill"
+    ". legend legend legend legend"
+}
+
+.skills__titles{
+  grid-area: title;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(10, 1fr);
+  justify-items: end;
+  justify-content: center;
+  align-items: center;
+}
+
+.skills__title{
+  margin: 0;
+}
+
+.skills__bars{
+  grid-area: skill;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(10, 1fr);
+  align-items: center;
+  padding: 0 1em;
+}
+
+
+.skills__bar { 
+  background-color: #0D3B66;
+  border-radius: 1em;
+  height: 2em;
+}
+
+.skills__innerBar{
+  margin-top: 0.375em;
+  margin-left: 0.4em;
+  z-index: 1;
+  background: var(--accent-color);
+  border-radius: 0.625em;
+  height: 1.25em;
+  width: 0%;
+
+  /*stay as per end of the animation*/
+  animation-fill-mode: forwards;
+}
+
+.skills__barsPercentages{
+  grid-area: skill;
+  display: grid;
+  grid-template-columns: repeat(4,25%);
+  grid-template-rows: 1fr;
+  justify-items:end;
+}
+
+.skills__barsPercentage{
+  position: relative;
+  z-index: 9;
+  height: 100%;
+  border-right: 1px dashed white;
+}
+
+.skills__legends{
+  grid-area: legend;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(4, 25%);
+  justify-items: center;
+  align-items: start;
+  font-size: 0.75em;
+}
+
+.skills__legend{
+  margin-top: 0;
+}
+
+
+/*Dev
+#about{
+  /*background: red;*/
+}
+
+/*//FEATURES SECTION*/
+
