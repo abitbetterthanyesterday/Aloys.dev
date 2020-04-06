@@ -42,3 +42,34 @@ window.addEventListener('scroll',() => {
     innerSkillBarArr.forEach(bar => bar.style.animationFillMode = 'forwards');
   }
 });
+
+
+// //POP UP MODAL WHEN CLICKING ON A WORK PROJECT// //
+
+let backgroundGreyFilter = document.querySelector('.bgGreyFilter');
+let worksProjects = [...document.querySelectorAll('.works__project')];
+
+const displayBgGreyFilter = () =>{
+  backgroundGreyFilter.classList.toggle('hidden');
+}
+
+//Display background filter when clicking on a project
+worksProjects.map(project => {
+  project.addEventListener('click', displayBgGreyFilter);
+  project.addEventListener('click', () => {project.classList.add('featuredProject')
+  })
+})
+
+//Remove background filter when clicking on the filter
+backgroundGreyFilter.addEventListener('click', displayBgGreyFilter);
+backgroundGreyFilter.addEventListener('click', () => {
+  worksProjects.map(project => {
+    project.classList.remove('featuredProject');
+  })
+});
+
+// let buttonCloseModal = document.querySelector('button'){
+//   closeModal();
+// }
+
+
