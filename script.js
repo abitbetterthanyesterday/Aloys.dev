@@ -1,3 +1,24 @@
+//STICKY NAVBAR
+
+const handleFixedNavbar = () =>  {
+  if (window.pageYOffset >= fixed) {
+    navbar.classList.add('fixed')
+  } else {
+    navbar.classList.remove('fixed');
+  }
+}
+
+window.onscroll = function() {handleFixedNavbar()};
+
+// Get the navbar
+var navbar = document.querySelector(".nav");
+
+// Get the offset position of the navbar
+var fixed = navbar.offsetTop;
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+
+
 //ABOUT SECTION ANIMATION
 (function animeAboutSection() {
     let skills = document.querySelector('#about');

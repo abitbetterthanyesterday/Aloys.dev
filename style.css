@@ -3,6 +3,7 @@
 :root {
     --main-color: #0D3B66;
     --accent-color: #DB2B39;
+    --navbar-color: purple;
 }
 
 /*RESET*/
@@ -18,12 +19,33 @@ body {
 html {
     min-height: 100vh;
     scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
 }
 
 header,
 section,
 footer {
     scroll-snap-align: start;
+}
+
+/*NAVBAR*/
+
+.nav{
+  background-color: rgba(0,0,0,0.1);
+  height: 100vh;
+  width: 5vw;
+  color: white;
+  position: absolute;
+}
+
+.fixed{
+  position: fixed;
+  z-index: 28;
+  top: 0;
+}
+
+.nav__link{
+    /*color: white;*/
 }
 
 /*HEADER*/
