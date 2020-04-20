@@ -1,20 +1,20 @@
 //STICKY NAVBAR
 
-const handleFixedNavbar = () =>  {
-  if (window.pageYOffset >= fixed) {
-    navbar.classList.add('fixed')
-  } else {
-    navbar.classList.remove('fixed');
-  }
-}
+// const handleFixedNavbar = () =>  {
+//   if (window.pageYOffset >= fixed) {
+//     navbar.classList.add('fixed')
+//   } else {
+//     navbar.classList.remove('fixed');
+//   }
+// }
 
-window.onscroll = function() {handleFixedNavbar()};
+// window.onscroll = function() {handleFixedNavbar()};
 
 // Get the navbar
-var navbar = document.querySelector(".nav");
+// var navbar = document.querySelector(".nav");
 
 // Get the offset position of the navbar
-var fixed = navbar.offsetTop;
+// var fixed = navbar.offsetTop;
 
 // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
 
@@ -66,30 +66,32 @@ window.addEventListener('scroll',() => {
   }
 });
 
+})()
+
 
 // //POP UP MODAL WHEN CLICKING ON A WORK PROJECT// //
 
-let backgroundGreyFilter = document.querySelector('.bgGreyFilter');
-let worksProjects = [...document.querySelectorAll('.works__project')];
+// let backgroundGreyFilter = document.querySelector('.bgGreyFilter');
+// let worksProjects = [...document.querySelectorAll('.works__project')];
 
-const displayBgGreyFilter = () =>{
-  backgroundGreyFilter.classList.toggle('hidden');
-}
+// const displayBgGreyFilter = () =>{
+//   backgroundGreyFilter.classList.toggle('hidden');
+// }
 
-//Display background filter when clicking on a project
-worksProjects.map(project => {
-  project.addEventListener('click', displayBgGreyFilter);
-  project.addEventListener('click', () => {project.classList.add('featuredProject')
-  })
-})
+// //Display background filter when clicking on a project
+// worksProjects.map(project => {
+//   project.addEventListener('click', displayBgGreyFilter);
+//   project.addEventListener('click', () => {project.classList.add('featuredProject')
+//   })
+// })
 
-//Remove background filter when clicking on the filter
-backgroundGreyFilter.addEventListener('click', displayBgGreyFilter);
-backgroundGreyFilter.addEventListener('click', () => {
-  worksProjects.map(project => {
-    project.classList.remove('featuredProject');
-  })
-});
+// //Remove background filter when clicking on the filter
+// backgroundGreyFilter.addEventListener('click', displayBgGreyFilter);
+// backgroundGreyFilter.addEventListener('click', () => {
+//   worksProjects.map(project => {
+//     project.classList.remove('featuredProject');
+//   })
+// });
 
 // let buttonCloseModal = document.querySelector('button'){
 //   closeModal();
