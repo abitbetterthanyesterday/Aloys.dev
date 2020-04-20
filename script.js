@@ -1,16 +1,39 @@
-let skills = document.querySelector('#about');
-let innerSkillBar = document.querySelectorAll('.skills__innerBar');
+//STICKY NAVBAR
 
-let innerSkillBarArr = [...innerSkillBar];
-//create an array of level of competency for each skills.
-let innerSkillBarLvlArr = [...innerSkillBar]
-                            .map(bar => bar.dataset.level);
+const handleFixedNavbar = () =>  {
+  if (window.pageYOffset >= fixed) {
+    navbar.classList.add('fixed')
+  } else {
+    navbar.classList.remove('fixed');
+  }
+}
+
+window.onscroll = function() {handleFixedNavbar()};
+
+// Get the navbar
+var navbar = document.querySelector(".nav");
+
+// Get the offset position of the navbar
+var fixed = navbar.offsetTop;
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
 
 
-let style = document.createElement('style');
+//ABOUT SECTION ANIMATION
+(function animeAboutSection() {
+    let skills = document.querySelector('#about');
+    let innerSkillBar = document.querySelectorAll('.skills__innerBar');
 
-createAnimationPerSkillsLevel = (lvl) => {
-  return `
+    let innerSkillBarArr = [...innerSkillBar];
+    //create an array of level of competency for each skills.
+    let innerSkillBarLvlArr = [...innerSkillBar]
+        .map(bar => bar.dataset.level);
+
+
+    let style = document.createElement('style');
+
+    createAnimationPerSkillsLevel = (lvl) => {
+        return `
     @keyframes growFromLeft${lvl}{
       from{
         width: 0;
@@ -21,19 +44,19 @@ createAnimationPerSkillsLevel = (lvl) => {
       }
     }
   `
-}
+    }
 
-style.innerHTML = innerSkillBarLvlArr
-    //Remove duplicate first
-    // .filter((a,b) => this.indexOf(a) === b)
-    //Then create the animation rules.
-    .map(lvl => createAnimationPerSkillsLevel(lvl)).join(' ');
+    style.innerHTML = innerSkillBarLvlArr
+        //Remove duplicate first
+        // .filter((a,b) => this.indexOf(a) === b)
+        //Then create the animation rules.
+        .map(lvl => createAnimationPerSkillsLevel(lvl)).join(' ');
 
-// Get the first script tag
-let ref = document.querySelector('script');
+    // Get the first script tag
+    let ref = document.querySelector('script');
 
-// Insert our new styles before the first script tag
-ref.parentNode.insertBefore(style, ref);
+    // Insert our new styles before the first script tag
+    ref.parentNode.insertBefore(style, ref);
 
 window.addEventListener('scroll',() => {
   if (skills.getBoundingClientRect().y < window.innerHeight/3) {
@@ -71,5 +94,4 @@ backgroundGreyFilter.addEventListener('click', () => {
 // let buttonCloseModal = document.querySelector('button'){
 //   closeModal();
 // }
-
 

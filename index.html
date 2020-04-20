@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="style.css">
     <!-- Work Sans font link -->
     <link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet">
+    <!-- animate.css link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <!-- font awesome 5 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js">
 </head>
 
 <body>
@@ -17,19 +21,35 @@
         <h2>I create beautiful looking websites and applications</h2>
         <input type='button' value="contact me">
     </header>
-    <!-- About section -->
+
+    <nav class = 'nav'>
+        <span> LOGO </span>
+        <a href="#" class="nav__link">HOME
+        </a>
+        <a href="#about" class="nav__link">ABOUT</a>
+        <a href="#feature" class="nav__link">FEATURES</a>
+        <a href="#work" class="nav__link">PORTOFLIO</a>
+        <a href="#contact" class="nav__link">CONTACT</a>
+    </nav>
+
     <main>
+      <!-- About section -->
+
         <section id='about'>
             <div class="about__subsection">
                 <h3>About me</h3>
                 <!-- Picture me -->
-                <img />
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, at harum eveniet recusandae qui quas alias dicta sint veniam consequuntur, repudiandae dolores obcaecati laborum, vel sapiente illo nulla. Similique, nulla!</p>
+                <div class="about__photoWrapper">
+                    <img class="about__photo"/>
+                </div>
+                <p>I am a full stack developer: I develop web applications and website from the front end to the back end, using the MERN stack using the latest technologies!</p>
+                <p>Make sure to check out my previous project below!</p>
+                <p>Make sure to check out my previous project below!</p>
             </div>
             <!-- Skills chart -->
             <div class='about__subsection skills'>
                 <div class="skills__titles">
-                    <h4 class="skills__title">Html 5</h4>
+                    <h4 class="skills__title"><i class="fas fa-camera"></i>Html 5</h4>
                     <h4 class="skills__title">CSS</h4>
                     <h4 class="skills__title">Jasvascript</h4>
                     <h4 class="skills__title">Git</h4>
@@ -96,25 +116,26 @@
             </div>
         </section>
         <!-- Features section -->
-        <section id="feature">
-            <!-- Grey filter for pop up modals -->
+
+<!--         <section id="feature">
+            <div class="features">
+                <div class="feature">
+                    <img class = "feature__icon" src = 'assets/Icon weather-time-10.png'></img>
+                    <h1 class = "feature__title">feature 1</h1>
+                    <p class = "feature__body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem eius saepe dicta nemo sed, voluptatum ipsa laborum similique deleniti culpa, dignissimos non ratione, ducimus possimus necessitatibus recusandae. Cupiditate dignissimos, sit.</p>
+                </div>
+                <div class="feature">
+                    <img class = "feature__icon" src = 'assets/Icon awesome-comments.png'></img>
+                    <h1 class = "feature__title">feature 2</h1>
+                    <p class = "feature__body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda sit, itaque deserunt saepe architecto eaque voluptates nemo sequi consequuntur rem delectus quae perspiciatis dolores. Eum, at, ad. Labore perspiciatis, iusto.</p>
+                </div>
+                <div class="feature">
+                    <img class = "feature__icon" src = 'assets/Icon metro-suitcase.png'></img>
+                    <h1 class = "feature__title">feature 3</h1>
+                    <p class = "feature__body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In consectetur molestiae vero explicabo tempore ad saepe harum soluta doloribus, iusto porro ea? Aperiam aut asperiores ducimus animi velit, ea quasi!</p>
+                </div>
             </div>
-            <div>
-                <span>icon 1</span>
-                <h1>feature 1</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem eius saepe dicta nemo sed, voluptatum ipsa laborum similique deleniti culpa, dignissimos non ratione, ducimus possimus necessitatibus recusandae. Cupiditate dignissimos, sit.</p>
-            </div>
-            <div>
-                <span>icon 2</span>
-                <h1>feature 2</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda sit, itaque deserunt saepe architecto eaque voluptates nemo sequi consequuntur rem delectus quae perspiciatis dolores. Eum, at, ad. Labore perspiciatis, iusto.</p>
-            </div>
-            <div>
-                <span>icon 3</span>
-                <h1>feature 3</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In consectetur molestiae vero explicabo tempore ad saepe harum soluta doloribus, iusto porro ea? Aperiam aut asperiores ducimus animi velit, ea quasi!</p>
-            </div>
-        </section>
+        </section> -->
         <!-- Latest work section-->
         <section id="work">
             <div class='bgGreyFilter hidden'></div>
@@ -149,19 +170,24 @@
                 </div>
             </div>
         </section>
+
         <!-- Contact me section -->
         <section id="contact">
-            <div>
-                <h3>CONTACT</h3>
-                <h3>Have a question or want to work together?</h3>
+            <form method = 'post' action=''>
+            <h3>CONTACT</h3>
+                <h4>Have a question or want to work together?</h4>
                 <form action="">
-                    <input type="text" placeholder='Name or company' />
-                    <input type="text" placeholder='Email' />
-                    <input type="text" placeholder='Subject' />
-                    <input type="text" placeholder='Message' />
-                    <input type="submit" value="send">
+                    <label for='name'>Name:</label>
+                    <input type="text" id='name' placeholder='Name or company' />
+                    <label for='email'>Email:</label>
+                    <input type="email" id='email' placeholder='Email' />
+                    <label for='subject'>Subject:</label>
+                    <input type="text" id='subject' placeholder='Subject' />
+                    <label for='message'>Message:</label>
+                    <textarea id ='message' placeholder='Message' rows='5'></textarea>
+                    <button type="submit" value="send">SEND</button>
                 </form>
-            </div>
+            </form>
         </section>
     </main>
     <!-- footer -->
