@@ -170,9 +170,31 @@ h4 {
 }
 
 
-.about__subsection>img{
+.about__photoWrapper{
+  position: relative;
   height: 30%;
   width: 60%;
+}
+
+.about__photo{
+  height: 100%;
+  width: 100%;
+  background: white;
+}
+
+.about__photoWrapper::after{
+  content:"";
+  position: absolute;
+  left: 0;
+  top: -5%;
+  width: 100vw;
+  z-index:-1;
+  height: 110%;
+  background: url('/assets/banner_macbook.jpg');
+  background-size: cover;
+  background-position: 0 70%;
+  opacity: 0.3;
+  overflow-x: hidden;
 }
 
 #about p {
