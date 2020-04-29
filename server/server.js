@@ -80,7 +80,7 @@ async function sendConfirmationMail(body){
   sendMail(req.body).catch(console.error).then(sendConfirmationMail(req.body)).catch(console.error);
 
 
-  res.redirect('/#contact');
+  res.redirect('/messageSent');
 })
 
 app.get('/messageSent', (req, res) => {

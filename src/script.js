@@ -77,15 +77,15 @@ worksProjects.map(project => {
 })
 // }
 
-let btnSend = document.querySelector('.form__btnSend');
-let flipCardInner = document.querySelector('.flip-card-inner');
-let contactBackface = document.querySelector('.contact__backface');
+// let btnSend = document.querySelector('.form__btnSend');
+// let flipCardInner = document.querySelector('.flip-card-inner');
+// let contactBackface = document.querySelector('.contact__backface');
 
-btnSend.addEventListener('click', (e) =>{
-  // e.preventDefault();
-  // setTimeout(() => {
-  // flipCardInner.style.transform = 'rotateY(180deg)';
-  contactBackface.style.transform = 'rotateY(0deg) translateY(200px)';
-  // }, 500ms)
-})
+// btnSend.addEventListener('click', (e) =>{
+//   // e.preventDefault();
+//   // setTimeout(() => {
+//   // flipCardInner.style.transform = 'rotateY(180deg)';
+//   contactBackface.style.transform = 'rotateY(0deg) translateY(200px)';
+//   // }, 500ms)
+// })
 
