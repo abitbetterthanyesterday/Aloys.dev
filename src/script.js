@@ -1,7 +1,7 @@
 /////___ABOUT SECTION ANIMATION___/////
 (function animeAboutSection() {
     let work = document.querySelector('#work');
-    let skills = document.querySelector('#about');
+    let skills = document.querySelector('.skills');
     let innerSkillBar = document.querySelectorAll('.skills__innerBar');
 
     let innerSkillBarArr = [...innerSkillBar];

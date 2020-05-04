@@ -133,7 +133,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 /////___ABOUT SECTION ANIMATION___/////
 (function animeAboutSection() {
   var work = document.querySelector('#work');
-  var skills = document.querySelector('#about');
+  var skills = document.querySelector('.skills');
   var innerSkillBar = document.querySelectorAll('.skills__innerBar');
 
   var innerSkillBarArr = _toConsumableArray(innerSkillBar); //create an array of level of competency for each skills.
@@ -201,6 +201,16 @@ worksProjects.map(function (project) {
     });
   });
 }); // }
+// let btnSend = document.querySelector('.form__btnSend');
+// let flipCardInner = document.querySelector('.flip-card-inner');
+// let contactBackface = document.querySelector('.contact__backface');
+// btnSend.addEventListener('click', (e) =>{
+//   // e.preventDefault();
+//   // setTimeout(() => {
+//   // flipCardInner.style.transform = 'rotateY(180deg)';
+//   contactBackface.style.transform = 'rotateY(0deg) translateY(200px)';
+//   // }, 500ms)
+// })
 },{}],"../../../../../usr/local/lib/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -229,7 +239,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62196" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55692" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
