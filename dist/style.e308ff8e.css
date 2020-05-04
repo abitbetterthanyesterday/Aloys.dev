@@ -77,6 +77,10 @@ section+section{
   margin-top: 10vh;
 }
 
+header{
+  position: relative;
+}
+
 .header__wrapper{
   max-width: 1200px;
   width: 80%;
@@ -112,7 +116,7 @@ section+section{
 .cta__btn {
     max-width: 50%;
     display: block;
-    padding: 1.1em 2.4em;
+    padding: 1.1em 3em;
     background-color: #DB2B39;
     color: #fff;
     text-transform: uppercase;
@@ -143,6 +147,16 @@ section+section{
 .cta__btn--secondary:hover{
   background-color: rgba(255,255,255,0.2);
   border: 1px white solid;
+}
+
+.scrollDown__wrapper{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 1.2em;
+  left: 45%;
+  opacity: 50%;
 }
 
 /*/////__ABOUT ME__/////*/
@@ -729,7 +743,7 @@ footer{
     max-width: 100px;
   }
 
-  .hidden-md{
+  .md-hidden{
     display: none !important;
   }
 }
@@ -749,7 +763,7 @@ footer{
 
   .header__title{
     font-size: 2.5rem;
-    margin-top: 2em;
+    margin-top: 1em;
   }
 
   .header__subtitle{
@@ -819,7 +833,7 @@ footer{
     flex:1 1 auto;
   }
 
-  .hidden-sm{
+  .sm-hidden{
     display: none !important;
   }
 
