@@ -155,8 +155,19 @@ header{
   align-items: center;
   position: absolute;
   bottom: 1.2em;
-  left: 45%;
-  opacity: 50%;
+  left: calc(50% - 2em);
+  opacity: 30%;
+  transition: 300ms all ease-in-out;
+}
+
+.scrollDown__wrapper:hover{
+  opacity: .7;
+  transform: scale(1.01);
+}
+
+.scrollDown__wrapper > a {
+  width: 2em;
+  height: auto;
 }
 
 /*/////__ABOUT ME__/////*/

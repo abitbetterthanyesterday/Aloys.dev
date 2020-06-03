@@ -155,8 +155,13 @@ header{
   align-items: center;
   position: absolute;
   bottom: 1.2em;
-  left: 45%;
+  left: calc(50%-);
   opacity: 50%;
+}
+
+.scrollDown__wrapper > a {
+  width: 2em;
+  height: auto;
 }
 
 /*/////__ABOUT ME__/////*/
