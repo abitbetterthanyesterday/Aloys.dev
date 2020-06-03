@@ -1,3 +1,5 @@
 node_modules/
 scp/
+dist/
 .cache/
+deploy.sh
